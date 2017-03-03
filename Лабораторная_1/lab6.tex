@@ -1,0 +1,704 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english, russian]{babel}
+
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode, colorlinks, urlcolor=magenta, linkcolor=black, pagecolor=black]{hyperref}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=3cm,bottom=3cm,bindingoffset=0cm}
+\usepackage{fancyhdr} 
+\linespread{1.3} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+\usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов Ф.Г.}
+\def\labauthors{Сарафанов Ф.Г.}
+\def\labnumber{13}
+\def\labtheme{Маятник Обербека}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{addons/lab-kol} % колинтулы на страницах
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+\usepackage{subcaption}
+\usepackage{tikz,csvsimple}
+\usetikzlibrary{scopes}
+\usetikzlibrary{%
+     decorations.pathreplacing,%
+     decorations.pathmorphing,%
+    patterns,%
+    calc,%
+    scopes,%
+    arrows,%
+    % arrows.spaced,%
+}
+
+\input{addons/lefttext}
+
+\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+
+\pgfplotstableset{
+    columns/mat/.style={%
+    string type,
+    column type=r,% 
+    column name=\textsc{Груз}%
+    },
+    columns/m1/.style={column name=$m_1\text{, г}$},
+    columns/m2/.style={column name=$m_2\text{, г}$},
+    columns/m3/.style={column name=$m_3\text{, г}$},
+    columns/m/.style={column name=$m\text{, г}$},
+    columns/dr/.style={column name=$\Delta{d}\text{, мм}$},
+    columns/d/.style={column name=$<d>$},
+    columns/r/.style={column name=$<r>$},
+    empty cells with={--}, % replace empty cells with ’--’
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule}
+  }
+
+\tikzset{force/.style={>=latex,draw=blue,fill=blue}, axis/.style={densely dashed,gray,font=\small}, acceleration/.style={>=open triangle 60,draw=blue,fill=blue}, inforce/.style={force,double equal sign distance=2pt}, interface/.style={pattern = north east lines, draw    = none, pattern color=gray!60, }, cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},    cargo/.style={rectangle, fill=black!70, inner sep=2.5mm/10, }}
+\usepackage[outline]{contour}
+
+% \begin{filecontents}{TableForErrorBarQuestion.txt}
+% xValue2 yValue2 Deltay2 Deltax2
+% 0   53366   2761 0.005
+% 2.81   64784   2604 0.005
+% 9.75   153559   5195 0.005
+% 17.5   338088   11102 0.005 
+% \end{filecontents}
+
+
+\begin{document}
+
+\input{addons/lab-titlepage}
+
+\tableofcontents
+\newpage
+
+\section*{Введение} % (fold)
+\addcontentsline{toc}{section}{Введение}
+\label{sec:input}
+
+
+\section{Оборудование} % (fold)
+\label{sec:device}
+
+
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.8\linewidth]{img/device}
+	\caption{Эскиз установки}
+	\label{fig:device}
+\end{figure}
+
+
+Для проведения опытов использовались: установка, состоящая из крестовины -- 4 спиц, закрепленных резьбовым соединением на втулке под углом $90^\circ$ друг у другу, втулки (ось втулки закреплена на стене), шкива на втулке; 4 груза с зажимным винтом (табл. \ref{tab:m}), один подвесной груз.
+
+
+\begin{table}[H]
+	\caption{Вес грузов}
+	\label{tab:m}
+	\centering
+	\pgfplotstableread[col sep = comma]{data/cargo.csv}{\loadedtable}
+	\pgfplotstabletypeset{\loadedtable}
+\end{table}
+
+\section{Вывод формул} % (fold)
+\label{sec:the}
+
+\begin{figure}[H]
+% \begin{center}
+	\begin{minipage}[h]{0.49\linewidth}
+	\centering
+		\includestandalone[width=0.8\linewidth]{img/force_block}
+		\subcaption{Шкив}	
+	\end{minipage}
+	\hfill 
+	\begin{minipage}[h]{0.49\linewidth}
+	\centering
+		\includestandalone[width=0.8\linewidth]{img/force_cargo}
+		\subcaption{Груз}	
+	\end{minipage}
+% \end{center}
+\end{figure}
+
+\subsection{Уравнения динамики} % (fold)
+
+Запишем второй закон Ньютона для груза:
+\begin{equation}
+	m\vec{a}=m\vec{g}+\vec{T}
+\end{equation}
+
+Так как нить невесомая, то $T'=T$.
+
+В проекции на $x$:
+\begin{equation}
+	\label{eq:ma}
+	ma_x=mg-T_x
+\end{equation}
+
+Запишем уравнение моментов маятника в проекции на ось $z$ (ось от нас -- в стену):
+\begin{equation}
+	\label{eq:Ie}
+	I\varepsilon_z=\sum_i M_{z(i)}=M_z^{T}+M_z^{R}
+\end{equation}
+
+Рассмотрим задачу в рамках одного периода колебаний (при следующем колебании физическая картина симметрична относительно отражения оси $z$)
+
+Примем момент силы трения в оси шкива постоянным: $M_z^{R}=-M_0$
+
+\subsubsection{Движение груза вниз} % (fold)
+
+При движении нити справа (примем раскручивание: падение груза вниз) момент силы натяжения нити по определению $M_z^{T}=T_x\cdot r$
+
+Так как нить нерастяжимая и движется без проскальзывания, то тангенциальное ускорение точек на шкиве и линейное груза будут равны, отсюда
+\begin{equation}
+	\label{eq:a-e}
+	a_x=\varepsilon_z\cdot r,
+\end{equation}   
+где $r$ -- радиус шкива ($r=17.5\pm0.05$ мм).
+
+Разрешим систему (\ref{eq:ma}), (\ref{eq:Ie}) относительно $\varepsilon_z$:
+\begin{equation}
+	I\varepsilon_z=M_z^{T}+M_z^{R}=T_x\cdot r -M_0\quad \Rightarrow \quad
+	T_x=\frac{I \varepsilon + M_0}{r}
+\end{equation}
+
+Пользуясь (\ref{eq:a-e}), перепишем (\ref{eq:ma}):
+\begin{equation}
+	m\cdot \varepsilon_z r = mg - T_x = mg - \frac{I \varepsilon + M_0}{r}=\frac{mgr}{r}-\varepsilon\frac{I}{r}-\frac{M_0}{r}
+\end{equation}
+\begin{equation}
+	\varepsilon_z(mr+\frac{I}{r})=\frac{mgr-M_0}{r}
+\end{equation}
+\begin{equation}
+	\label{eq:e-t}
+	\varepsilon_z=\frac{mgr-M_0}{mr^2+I}\\
+\end{equation}
+
+\subsubsection{Движение груза вверх} % (fold)
+
+При движении нити слева (накручивание: подъем груза вверх) момент силы натяжения нити по определению $M_z^{T}=-T_x\cdot r$
+\begin{equation}
+	\label{eq:a-e2}
+	a_x=-\varepsilon_z\cdot r,
+\end{equation}   
+
+Разрешим систему (\ref{eq:ma}), (\ref{eq:Ie}) относительно $\varepsilon_z$:
+\begin{equation}
+	I\varepsilon_z=M_z^{T}+M_z^{R}=-T_x\cdot r -M_0\quad \Rightarrow \quad
+	T_x=-\frac{I \varepsilon + M_0}{r}
+\end{equation}
+
+Пользуясь (\ref{eq:a-e2}), перепишем (\ref{eq:ma}):
+\begin{equation}
+	m\cdot (-\varepsilon_z r) = mg - T_x = mg + \frac{I \varepsilon + M_0}{r}=\frac{mgr}{r}+\varepsilon\frac{I}{r}+\frac{M_0}{r}
+\end{equation}
+\begin{equation}
+	\varepsilon_z(-mr-\frac{I}{r})=\frac{mgr+M_0}{r}
+\end{equation}
+\begin{equation}
+	\label{eq:e+t}
+	\varepsilon_z=-\frac{mgr+M_0}{mr^2+I}
+\end{equation}
+
+
+
+\subsection{Движение маятника} % (fold)
+
+По определению, 
+\begin{equation}
+	\varepsilon_z=\frac{\mathrm d\omega_z}{\mathrm dt}
+\end{equation}
+\begin{equation}
+	\omega_z=\frac{\mathrm d\phi}{\mathrm dt}
+\end{equation}
+
+Полагая начальные условия $\phi(t=0)=0, \vec\omega(t=0)=0$,
+\begin{equation}
+	\label{eq:omega-t}
+	\omega_z(t)=\frac{mgr-M_0}{mr^2+I}\cdot t
+\end{equation}
+\begin{equation}
+	\label{eq:phi-t}
+	\phi(t)=\frac{mgr-M_0}{mr^2+I}\cdot \frac{t^2}{2}
+\end{equation}
+
+Обозначим время достижения грузом наинизшей точки $t_1$. Тогда
+\begin{equation}
+	\label{eq:omega1phi1}
+	\omega_1=\omega_z(t_1), \quad \phi_1=\phi(t_1)
+\end{equation}
+
+\subsubsection{Рывок и потеря энергии} % (fold)
+
+При достижении нижней точки происходит рывок. 
+
+Если бы нить была идеальная, то полная механическая энергия груза бы не поменялась. В реальности часть энергии уходят на создание упругих волн в нити.
+
+Таким образом, после рывка модуль скорости груза (а значит, и угловой скорости шкива) уменьшится (относительно скорости при движении вниз на этой же высоте).
+
+Значит, \textit{при движении вверх} начальным условием будет не $\omega_z(t_1)=\omega_1$, а новое значение $\omega_z(t_1)=\omega_0$.
+
+Угол, как непрерывная функция времени, своего значения не поменяет.
+
+Тогда
+
+\begin{equation}
+	\label{eq:omega2}
+	\omega_z(t)=\omega_0-\frac{mgr+M_0}{mr^2+I}\cdot (t-t_1)
+\end{equation}
+\begin{equation}
+	\label{eq:phi2}
+	\phi(t)=\phi_1+\omega_0(t-t_1)-\frac{mgr-M_0}{mr^2+I}\cdot \frac{(t-t_1)^2}{2}
+\end{equation}
+
+Разрешая систему (\ref{eq:omega2},\ref{eq:phi2},\ref{eq:omega1phi1}) относительно неизвестных величин, получаем
+\begin{equation}
+	I=\frac{mgr\left[t_2-t_1\right]^2}{\phi_2-\phi_1\left[1-(t_2/t_1-1)^2\right]}-mr^2
+\end{equation}
+\begin{equation}
+	M_0=mgr\frac{\phi_2-\phi_1\left[1+(t_2/t_1-1)^2\right]}
+				{\phi_2-\phi_1\left[1-(t_2/t_1-1)^2\right]}
+\end{equation}
+\begin{equation}
+	\omega_0=2\frac{\phi_2-\phi_1}{t_2-t_1}, \qquad
+	\omega_1=2\frac{\phi_1}{t_1}
+\end{equation}
+
+\subsubsection{Движение в отсутствие потерь энергии}
+
+Следствием отсутствия потерь энергии будет два факта:
+
+\begin{enumerate}
+	\item Скорость не изменится после рывка, значит, $\omega_1=\omega_2$.
+	\item Трения в оси не будет, значит, $M_0=0$.
+\end{enumerate}
+
+Тогда при движении \textit{вниз} будет:
+\begin{equation}
+	\omega_z(t)=\frac{mgr}{mr^2+I}\cdot t
+\end{equation}
+\begin{equation}
+	\phi(t)=\frac{mgr}{mr^2+I}\cdot \frac{t^2}{2}
+\end{equation}
+
+Начальные условия при движении \textit{вверх} -- $\omega_1, \phi_1$:
+\begin{equation}
+	\label{eq:omega2}
+	\omega_z(t)=\omega_1-\frac{mgr}{mr^2+I}\cdot (t-t_1)=\frac{mgr}{mr^2+I}\cdot (2t_1-t)
+\end{equation}
+\begin{gather}
+	\label{eq:phi2}
+	\phi(t)=\phi_1+\omega_1(t-t_1)-\frac{mgr}{mr^2+I}\cdot \frac{(t-t_1)^2}{2}=\\ \nonumber
+	=\frac{mgr}{mr^2+I}\frac{t_1^2}{2}+\frac{mgr}{mr^2+I}(t_1t-t_1^2)-\frac{mgr}{mr^2+I}\cdot \frac{(t-t_1)^2}{2}=\\ \nonumber
+	=\frac{mgr}{mr^2+I}\left[\frac{t_1^2}{2}-t_1^2+t_1t-\frac{t^2}{2}+t_1t-\frac{t_1^2}{2}\right]=\\ \nonumber
+	=\frac{mgr}{mr^2+I}\left[
+		2t_1t- \frac{(2t_1^2+t^2)}{2}
+	\right]
+\end{gather}
+Легко убедиться, что подстановкой $t=t_1$ в уравнения для движения вверх получаются уравнения движения вниз, что соответствует допущению о отсутствии влияния рывка на скорость в нижней точке.
+
+
+\begin{figure}[H]
+\begin{center}
+	\begin{minipage}[h]{0.49\linewidth}
+	\centering
+		\begin{tikzpicture}[scale=0.8]
+			\begin{axis}[
+					xlabel=$t$,
+					ylabel=$\omega_z(t)$,
+					xtick = {0},
+					ytick = {0}
+				]
+				\addplot [domain=0:2]({x},x);
+				\addplot [domain=2:4](x,{2*2-x});
+			\end{axis}
+		\end{tikzpicture}
+	\end{minipage}
+	\hfill 
+	\begin{minipage}[h]{0.49\linewidth}
+	\centering
+		\begin{tikzpicture}[scale=0.8]
+			\begin{axis}[
+					xlabel=$t$,
+					ylabel=$\phi(t)$,
+					xtick = {0},
+					ytick = {0}
+				]
+				\addplot [domain=0:2](x,{x^2/2});
+				\addplot [domain=2:4](x,{4*x-4-x^2/2});
+			\end{axis}
+		\end{tikzpicture}
+	\end{minipage}
+\end{center}
+\end{figure}
+
+\subsubsection{Движение при моменте сил трения, пропорциональном угловой скорости}
+
+Рассмотрим движение груза только вниз - т.е. размотку нити. Тогда можем воспользоваться ранее выведенной формулой (\ref{eq:e-t}):
+
+\begin{equation*}
+	\varepsilon(t)=\frac{mgr-M_0}{mr^2+I}
+\end{equation*}
+
+Примем момент сил трения пропорциональным угловой скорости:
+\begin{equation}
+	M_0=k\cdot\omega_z
+\end{equation}
+По определению
+\begin{equation}
+	\varepsilon(t)=\frac{d\omega_z}{dt}
+\end{equation}
+Тогда
+\begin{equation}
+	\frac{d\omega_z}{dt}=\frac{mgr-k\cdot\omega_z}{mr^2+I}
+\end{equation}
+Произведем разделение переменных:
+\begin{equation}
+	\frac{d\omega_z}{mgr-k\cdot\omega_z}=\frac{dt}{mr^2+I}
+\end{equation}
+Занесем функцию скорости под дифференциал:
+\begin{equation}
+	-\frac{1}{k}\frac{d(mgr-k\cdot\omega_z)}{mgr-k\cdot\omega_z}=\frac{dt}{mr^2+I}
+\end{equation}
+Интегрируем:
+\begin{equation}
+	-\frac{1}{k}\int_0^{\omega(t)}\frac{d(mgr-k\cdot\omega_z)}{mgr-k\cdot\omega_z}=\int_0^t\frac{dt}{mr^2+I}
+\end{equation}
+\begin{equation}
+	-\frac{1}{k}[\ln(mgr-k\cdot\omega_z)-\ln(mgr-k\cdot0)]=
+	\frac{t}{mr^2+I}
+\end{equation}
+\begin{equation}
+	-\frac{1}{k}\ln\frac{mgr-k\cdot\omega_z}{mgr}=
+	\frac{t}{mr^2+I}
+\end{equation}
+\begin{equation}
+	\ln\frac{mgr-k\cdot\omega_z}{mgr}=
+	\frac{-kt}{mr^2+I}
+\end{equation}
+Потенцируем:
+\begin{equation}
+	\frac{mgr-k\cdot\omega_z}{mgr}=
+	e^{\frac{-kt}{mr^2+I}}
+\end{equation}
+\begin{equation}
+	{mgr-k\cdot\omega_z}=
+	{mgr}\cdot e^{\frac{-kt}{mr^2+I}}
+\end{equation}
+\begin{equation}
+	k\cdot\omega_z=
+	{mgr}(1-e^{\frac{-kt}{mr^2+I}})
+\end{equation}
+\begin{equation}
+	\omega_z=
+	\frac{mgr}{k}(1-e^{\frac{-kt}{mr^2+I}})
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=1]
+		\begin{axis}[
+				xlabel=$t$,
+				ylabel=$\omega_z(t)$,
+				xtick = {0},
+				ytick = {0},
+				extra y ticks={1},
+				extra y tick labels={$\frac{mgr}{k}$},
+				samples = 1000
+			]
+			\addplot [domain=0:10](x,{1-e^(-x)});
+			% \addplot [domain=2:4](x,{4*x-4-x^2/2});
+			\addplot[color=black, dashed] coordinates {
+			  (0,1) 
+			  (10,1)
+			};
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+Угловая скорость блока  асимптотически возрастает. Максимальная скорость, к которой стремится $\omega_z$, легко найдется:
+\begin{equation}
+	\omega_z^{max}=\lim_{t\to+\infty} \frac{mgr}{k}(1-e^{\frac{-kt}{mr^2+I}})=\frac{mgr}{k}
+\end{equation}
+
+\subsection{Работа и энергия в системе маятник--груз}
+
+
+\subsubsection{Потери кинетической энергии маятника при прохождении грузом нижней точки}
+
+Запишем полную кинетическую энергию системы маятник--груз:
+\begin{equation}
+	W^\text{полн}=\frac{mv_\text{груза}^2}{2}+\frac{I\omega_\text{маятника}^2}{2}%+mgh_\text{груза}
+\end{equation}
+
+При прохождении грузом нижней точки необходимо рассмотреть два бесконечно близких момента времени.
+
+В момент времени \textit{непосредственно \textbf{до} рывка} груз достигает нижней точки. Угловая скорость маятника в этот 	момент времени найдется по формуле (\ref{eq:omega-t}), а скорость груза -- нулевая.
+
+Тогда
+\begin{equation}
+	W^\text{полн}_\text{до}=\frac{I\omega_1^2}{2}%+mgh_\text{груза}
+\end{equation}
+
+В момент времени \textit{непосредственно \textbf{после} рывка} высота груза не поменяется, скорость останется нулевой, изменится угловая скорость и примет значение $\omega_0$, которое мы можем найти экспериментально, и тогда
+
+\begin{equation}
+	W^\text{полн}_\text{после}=\frac{I\omega_0^2}{2}%+mgh_\text{груза}
+\end{equation}
+
+Таким образом, убыль кинетической энергии $-\Delta W$ составит
+\begin{equation}
+	-\Delta W=-(W^\text{полн}_\text{после}-W^\text{полн}_\text{до})=\frac{I}{2}(\omega_1^2-\omega_0^2)
+\end{equation}
+
+Как видно, изменение кинетической энергии произошло только у самого маятника.
+
+Теперь можем найти, какую часть энергии маятник потерял при прохождении грузом нижней точки:
+
+\begin{equation}
+	\eta=\frac{-\Delta W}{W^\text{полн}_\text{до}}\times100\%=
+	\frac{\omega_1^2-\omega_0^2}{\omega_1^2}\times100\%
+\end{equation}
+
+\subsubsection{Работа сил трения}
+
+Запишем полную механическую энергию системы маятник--груз:
+\begin{equation}
+	W^\text{мех}=\frac{mv_\text{груза}^2}{2}+\frac{I\omega_\text{маятника}^2}{2}+mgh_\text{груза}
+\end{equation}
+
+Выберем ноль потенциальной энергии на $0$ оси $x$ (ось вниз, 0 -- точка пуска)
+
+Рассмотрим случай, когда маятник совершает один период колебаний. Тогда полная механическая энергия в момент пуска будет составлять
+\begin{equation}
+	W^\text{мех}_\text{нач}=0,
+\end{equation}
+
+так как начальные условия - $\omega(t=0)=0, h(t=0)=0$.
+
+В некий момент времени $t_2$ груз достигает верхней точки, и его полная механическая энергия составляет
+\begin{equation}
+	W^\text{мех}_\text{кон}=-mgh',
+\end{equation}
+
+Тогда изменение полной механической энергии
+\begin{equation}
+	W^\text{мех}_\text{нач}-W^\text{мех}_\text{кон}=mgh',
+\end{equation}
+
+
+Сила трения -- не единственная диссипативная сила в маятнике Обербека. При рывке в нижней точке часть энергии идет на создание упругих волн в нити, на деформацию подвеса, на создание поперечных колебаний груза.
+
+Эту часть энергии мы нашли ранее: $\frac{I}{2}(\omega_1^2-\omega_0^2)$.
+
+Тогда можем выразить:
+\begin{equation}
+	A_\text{тр}=W^\text{мех}_\text{нач}-W^\text{мех}_\text{кон}-\frac{I}{2}(\omega_1^2-\omega_0^2)=mgh'-\frac{I}{2}(\omega_1^2-\omega_0^2)
+\end{equation}
+
+где $h'$ -- расстояние от начала отсчета в верхней точке.
+
+\subsection{Расчет зависимости момента инерции грузов}
+
+Найдем зависимость момента инерции грузов на крестовине маятника в зависимости от их положения относительно оси вращения. 
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.5\linewidth]{img/I_cargo}
+	\caption{Расстояние $r_1$ от оси вращения до центра масс груза}
+	\label{fig:cargo-none}
+\end{figure}
+
+Примем известным момент инерции сплошного однородного цилиндра длины $l$, радиуса $r_2$ и массы $m$ относительно оси, перпендикулярной оси цилиндра и проходящей через центр масс (далее -- $q$-ось), параллельной оси вращения блока:
+\begin{equation}
+ 	I_\text{ц}^\text{q}=f(l,r_2,m)={1 \over 4} m \cdot r_2^2 + {1 \over 12} m \cdot l^2
+ \end{equation} 
+
+По теореме Гюйгенса-Штейнера можем найти момент инерции груза относительно оси $z$:
+\begin{gather}
+	I_\text{гр}^z=I_\text{ц}^\text{q}(l,r_2,m_2)+m_2\cdot{r_1}^2=\\=
+	{1 \over 4} m_2 \cdot r_2^2 + {1 \over 12} m_2 \cdot l^2+
+	m_2\cdot r_1^2
+\end{gather}
+
+И для всех четырех грузов момент будет составлять:
+
+\begin{gather}
+	I_\text{4гр}^z=	m_2 \cdot r_2^2 + {1 \over 3} m_2 \cdot l^2+
+	4m_2\cdot r_1^2
+\end{gather}
+
+\newpage
+\section{Расчет погрешностей} % (fold)
+\label{sec:ex}
+
+\newpage
+\section{Экспериментальные данные} % (fold)
+\label{sec:ex}
+\subsection{Компьютерная обработка данных}
+    
+Было проведено 4 серии опытов, в каждой по три опыта. 
+
+Для снятия зависимости положения груза от времени была задействована видеосъемка.
+
+Полученные видеофрагменты были обработаны программным пакетом \textbf{ffmpeg} для стабилизации изображения.
+
+Далее c помощью ПО \textbf{Tracker} (is a free video analysis and modeling tool built on the Open Source Physics) в полуавтоматическом режиме была распознана на каждом кадре точка, служащая ориентиром для начала оси (в качестве такой точки была использована шляпка черного самореза над линейкой установки, т.к. высокая контрастность дает хороший \% распознования). 
+
+Привязав к каждому кадру ось $x$, в полуавтоматическом режиме распознавалось положение груза на каждом кадре. Сформированный вывод сохранен в простейшем табличном формате \textbf{csv} (comma-separated values).
+
+На основе экспериментальных данных в таблицы добавлены расчетные значения погрешностей и косвенных величин (работа с массивами данных производилась на математическом пакете \textbf{NumPy}, язык \textbf{Python}).
+
+С помощью пакета \textbf{PgfPlots} на \textbf\LaTeX\ построены графики, соответствующие каждой серии опытов.  
+
+\newpage
+\subsection{Экспериментальное определение момента инерции}
+
+\subsubsection{Маятник без дополнительных грузов}
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.8\linewidth]{img/cargo_none}
+	\caption{Без грузов}
+	\label{fig:cargo-none}
+\end{figure}
+\begin{gather}
+	I_1=54201\pm 2761 \text{ g/cm}^2\\
+	I_2=52789\pm 2112 \text{ g/cm}^2\\
+	I_3=53366\pm 2292 \text{ g/cm}^2
+	% \omega_0= 33.10 \text{c}^{-1}\\
+	% \omega_1= 35.22 \text{c}^{-1}\\
+	\eta= 11.64 \%\\
+	A_\text{тр}= -2209594 \text{ erg}
+\end{gather}
+
+\subsubsection{Маятник с грузами около шкива}
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.8\linewidth]{img/cargo_start}
+	\caption{Грузы зафиксированы у начала спиц}
+	\label{fig:cargo-none}
+\end{figure}
+\begin{gather}
+	I_1=68548\pm 2704 \text{ g/cm}^2\\
+	I_2=63092\pm 2469 \text{ g/cm}^2\\
+	I_3=62712\pm 2386 \text{ g/cm}^2\\
+	\eta= 17.33 \%\\
+	A_\text{тр}= -3391955 \text{ erg}
+\end{gather}
+Расчетный момент инерции грузов
+\begin{equation}
+	I=280\cdot(1.5)^2+1/3\cdot280\cdot(2.5)^2+4\cdot280\cdot(2.81)^2=10056\text{ g/cm}^2
+\end{equation}
+
+\subsubsection{Маятник с грузами в центре спиц}
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.8\linewidth]{img/cargo_middle}
+	\caption{Грузы зафиксированы в центре спиц}
+	\label{fig:cargo-none}
+\end{figure}
+\begin{gather}
+	I_1=152823\pm 5195 \text{ g/cm}^2\\
+	I_2=154595\pm 5223 \text{ g/cm}^2\\
+	I_3=153261\pm 5291 \text{ g/cm}^2\\
+	\eta= 15.63 \%\\
+	A_\text{тр}= -3433231 \text{ erg}
+\end{gather}
+Расчетный момент инерции грузов
+\begin{equation}
+	I=280\cdot(1.5)^2+1/3\cdot280\cdot(2.5)^2+4\cdot280\cdot(9.75)^2=107683\text{ g/cm}^2
+\end{equation}
+
+\subsubsection{Маятник с грузами на концах спиц}
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.8\linewidth]{img/cargo_end}
+	\caption{Грузы зафиксированы на концах спиц}
+	\label{fig:cargo-none}
+\end{figure}
+\begin{gather}
+	I_1=337206\pm 11102 \text{ g/cm}^2\\
+	I_2=346030\pm 11667 \text{ g/cm}^2\\
+	I_3=331027\pm 11421 \text{ g/cm}^2\\
+	\eta= 15.29 \%\\
+	A_\text{тр}= -3474774 \text{ erg}
+\end{gather}
+Расчетный момент инерции грузов
+\begin{equation}
+	I=280\cdot(1.5)^2+1/3\cdot280\cdot(2.5)^2+4\cdot280\cdot(17.5)^2=301213\text{ g/cm}^2
+\end{equation}
+
+\subsubsection{Зависимость момента инерции по удалению грузов от центра}
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=1\linewidth]{img/i_r}
+	\caption{Зависимость $I(r)$, экспериментальная}
+	\label{fig:cargo-none}
+\end{figure}
+
+Полученные экспериментально моменты инерции маятника, за вычетом начального момента инерции (без грузов), очень хорошо совпадают с расчетными значениями моментов инерции:
+
+\begin{gather}
+	63092 - 10056\approx 52789 \text{ g/cm}^2\\
+	153261 - 107683\approx 52789 \text{ g/cm}^2\\
+	353261 - 301213\approx 52789 \text{ g/cm}^2
+\end{gather}
+
+% \newpage
+% \subsection{Затухание колебаний маятника}
+
+% Дополнительно была снято затухание колебаний груза на маятнике.
+
+% \begin{figure}[H]
+% 	\centering	
+% 	\includestandalone[width=0.8\linewidth]{img/cargo_osci}
+% 	\caption{Затухающие колебания маятника без грузов}
+% 	\label{fig:osci}
+% \end{figure}
+
+\subsection{Вращательная динамика блока}
+\subsubsection{Зависимость угла поворота блока от времени}
+\begin{figure}[H]
+	\centering	
+	\includestandalone[width=0.8\linewidth]{img/phi_t}
+	\caption{Зависимость угла поворота блока от времени}
+	\label{fig:osci}
+\end{figure}
+
+Зависимость угла поворота блока от времени снята для маятника без грузов.
+
+Точка разворота произошла в момент времени $t=4.995\text{ c}$, груз прошел путь $S=150\text{ cm}$
+Точка максимального подъема произошла в момент времени $t=8.692\text{ c}$, груз прошел путь $S=187\text{ cm}$
+\subsubsection{Зависимость угловой скорости блока от времени}
+\begin{figure}[H]
+	\centering	
+	\includestandalone[width=0.8\linewidth]{img/omega_t}
+	\caption{Зависимость угловой скорости блока от времени}
+	\label{fig:osci}
+\end{figure}
+Зависимость угловой скорости блока от времени снята для маятника без грузов.
+
+В точке разворота груза маятником достигается максимальная угловая скорость $\omega_{max}=25.2\text{ c}^{-1}$.
+
+\newpage
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+
+
+\end{document}

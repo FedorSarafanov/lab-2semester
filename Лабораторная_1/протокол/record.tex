@@ -1,0 +1,147 @@
+\documentclass[a4paper,10pt]{article}
+ 
+\usepackage{extsizes}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+% \usepackage[russian]{babel}
+\usepackage[english, russian]{babel}
+% \usepackage{newtx}
+% \usepackage{cyrtimes}
+\usepackage{misccorr}
+\usepackage{array}
+\usepackage{tabu}
+\usepackage{hhline}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\usepackage{graphicx} % для вставки картинок
+\graphicspath{{img/}}
+\usepackage{amssymb,amsfonts,amsmath,amsthm} % математические дополнения от АМС
+
+% \usepackage{fontspec}
+% \usepackage{unicode-math}
+
+\usepackage{indentfirst} % отделять первую строку раздела абзацным отступом тоже
+\usepackage[usenames,dvipsnames]{color} % названия цветов
+\usepackage{makecell}
+\usepackage{multirow} % улучшенное форматирование таблиц
+\usepackage{ulem} % подчеркивания
+\linespread{1.3} % полуторный интервал
+% \renewcommand{\rmdefault}{ftm} % Times New Roman (не работает)
+\frenchspacing
+\usepackage{geometry}
+\geometry{left=3cm,right=2cm,top=3cm,bottom=1cm,bindingoffset=0cm}
+\usepackage{titlesec}
+
+% \definecolor{black}{rgb}{0,0,0}
+% \usepackage[colorlinks, unicode, pagecolor=black]{hyperref}
+% \usepackage[unicode]{hyperref} %ссылки
+% \usepackage{fancyhdr} %загрузим пакет
+% \pagestyle{fancy} %применим колонтитул
+% \fancyhead{} %очистим хидер на всякий случай
+% \fancyhead[LE,RO]{Сарафанов Ф.Г.} %номер страницы слева сверху на четных и справа на нечетных
+% \fancyhead[CO, CE]{Отчёт по лабораторной работе №16}
+% \fancyhead[LO,RE]{Определение ${g}$} 
+% \fancyfoot{} %футер будет пустой
+% \fancyfoot[CO,CE]{\thepage}
+\renewcommand{\labelenumii}{\theenumii)}
+\newcommand{\ddt}{$\ \pm\ 0.2\ \text{с}$}
+\newcommand{\ddtv}{$\ \pm\ 0.8\ \text{с}$}
+\newcommand{\ddh}{$\ \pm\ 0.1\ \text{см}$}
+
+\usepackage{amsthm}
+\newtheorem{define}{Определение}
+\newtheorem{theorem}{Теорема}
+\newtheorem{problem}{Задача}
+
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+	Протокол\\
+	Лабораторная работа №13\\
+	\textbf{\textsc{Маятник Обербека}}
+\end{center}
+\underline{\textbf{Приборы и оборудование}}: маятник Обербека, груз на нити, дополнительные грузы, секундомер, линейка, штангенциркуль
+
+\vspace{1em}
+Масса груза на нити $m=280\pm0.5\text{ г}$, масса дополнительных грузов $M=152\pm0.5\text{ г}$, $\Delta{t}=0.2$ с, $\Delta{m}=0.5$ г, $\Delta{r}=0.005$ см, $\Delta{h}=0.1$ см, $\Delta{R}=0.1$ см
+
+\vspace{1em}
+1. Снятие зависимости угла поворота блока от времени $\phi(t)$
+\\
+%
+\\
+\begin{tabu} to \textwidth {|*{2}{X[1.32c]|*{3}{X[1.05c]|}X[1c]|X[1.3c]|}} 
+\hline
+\multicolumn{6}{|c|}{Груз опускается} & \multicolumn{6}{c|}{Груз опускается и поднимается}\\
+\hline
+$S$, см & \multicolumn{3}{c|}{$t$, с}&$t_\text{ср}$&$\phi=H/r$ &
+$S$, см & \multicolumn{3}{c|}{$t$, с}&$t_\text{ср}$&$\phi=H/r$\\
+\hline
+15&2.933&3.133 & 2.999&3.02 & 8.57& 160& 	11.296 & 11.53 & 11.363 &11.39 &91.42 \\ \hline
+25&3.966& 4.199& 4.032&4.06 & 14.28&170 & 	11.696 & 11.93 & 11.763 &11.79 &97.14 \\ \hline
+35&4.832& 4.999&4.899&4.91 &20.00 &180 & 		12.096 & 12.33 & 12.163 &12.19 &102.85 \\ \hline
+45&5.565& 5.799&5.632 & 5.66& 25.71& 190& 	12.563 & 12.796 & 12.63 &12.66 &108.57 \\ \hline
+65&6.831& 7.065& 6.898& 6.93& 37.14& 200& 	13.029 & 13.263 & 13.096 & 13.12& 114.28\\ \hline
+85&7.898& 8.198& 8.031&8.04 & 48.57& 210& 	13.496 & 13.796 & 13.563 & 13.61 & 120.00\\ \hline
+105&8.897& 9.131& 8.964& 8.99&60.00 & 220& 	14.029 & 14.329 & 14.162 &14.17 & 125.71\\ \hline
+125&9.764& 9.997&9.831 &9.86 & 71.42&230& 	14.629 & 14.929 & 14.696 & 14.75& 131.42\\ \hline
+150&10.69& 10.997& 10.83&10.8 &85.71 &240& 	15.262 & 15.529 & 15.362 & 15.38&137.14 \\ \hline
+% № шарика & Материал & $L$, см & 5-20 & 20-34 & 35-50 \\ 
+% \hline
+% 1	&	сталь  		&	\multirow{2}{*}{$t$, c}	&	&	&	\\ 
+% \hhline{--|~|---}
+% 2	&	пластмасса	&&&&		\\ 
+% \hline
+\end{tabu}
+
+\vspace{1cm}
+2. 
+\begin{equation*}
+% \vspace{-1em}
+	I=\frac{mg\cdot r \cdot (t_2-t_1)^2}{\phi_2-\phi_1[1-(\frac{t_2}{t_1}-1)^2]}-mr^2
+% \vspace{1em}
+\end{equation*}
+%
+\\
+\begin{tabu} to \textwidth {|X[2.6c]|X[0.4c]|X[0.7c]|X[0.7c]|*{7}{X[1.1c]|}X[1.6c]|X[1.6c]|} 
+\hline
+Положение грузов & № & $R$, см & $r$, см & $h$, см & $t_1$, с & $h'$, см &  $t_2$, с & \noindent\parbox[c]{\hsize}{$\phi_1$} &  $\phi'$ &  $\phi_2$ & $I$, г/см$^2$ & $I_\text{ср}$, г/см$^2$\\
+\hline
+
+\multirow{3}{*}{Нет} & 1 & \multirow{3}{*}{-} & \multirow{12}{*}{1.75} & 152.7&4.93 & 114.8& 8.893&86.85 & 65.63& 152.5&54201 & \multirow{3}{*}{53366}\\ 
+\hhline{|~|-|~|~|--------|~|}
+ & 2 && &152.3 & 4.39& 115.8&8.26 & 87.64& 66.19& 153.8&52789 &\\ 
+\hhline{|~|-|~|~|--------|~|}
+ & 3 & & &152.8& 4.59& 114.7&8.33 &87.92 &65.54 & 153.5&53366 &\\ 
+
+ \hhline{|-|-|-|~|--------|-|}
+
+ \multirow{3}{*}{У шкива} & 1 & \multirow{3}{*}{2.81} & &153.5 &5.165 & 135.5&9.53 &88.28 &68.90  &157.1 &68548 & \multirow{3}{*}{64784}\\ 
+\hhline{|~|-|~|~|--------|~|}
+ &2&&&152.7&4.965 &120.5 & 9.164& 88.43& 69.28 &157.7 &63092 &\\ 
+\hhline{|~|-|~|~|--------|~|}
+ &3&&& 152.1 & 4.732&121.2 &9.064 &87.32& 68.71 & 156.0&62712 &\\  \hhline{|-|-|-|~|--------|-|}
+
+ \multirow{3}{*}{Посередине} & 1 & \multirow{3}{*}{9.75}&& 151.8& 7.265&131.6 & 14.39& 86.97&75.25& 162.2&152823 & \multirow{3}{*}{153559}\\ 
+\hhline{|~|-|~|~|--------|~|}
+ & 2&&& 151.2& 7.297&132.3 & 14.49&86.94 & 75.60& 162.5&154595 &\\ 
+\hhline{|~|-|~|~|--------|~|}
+ & 3&&& 152.6& 7.011 & 132.1 & 14.27 & 86.2&75.71 &161.9 & 153261 &\\  \hhline{|-|-|-|~|--------|-|}
+
+ \multirow{3}{*}{На концах} & 1 & \multirow{3}{*}{17.5}&&152.2 &10.83 &137.0 & 21.56&86.96 &78.33 &165.3 &337206 & \multirow{3}{*}{338088}\\ 
+\hhline{|~|-|~|~|--------|~|}
+ & 2&&&151.3 &11.06 &135.9 &21.79 & 87.02&77.68 &164.7 &346030 &\\ 
+\hhline{|~|-|~|~|--------|~|}
+ & 3&&& 151.1& 10.89& 135.5&21.29 & 86.91& 77.44&164.3 & 331027&\\  \hhline{|-|-|-|-|--------|-|}
+
+
+% № шарика & Материал & $L$, см & 5-20 & 20-34 & 35-50 \\ 
+% \hline
+% 1	&	сталь  		&	\multirow{2}{*}{$t$, c}	&	&	&	\\ 
+% \hhline{--|~|---}
+% 2	&	пластмасса	&&&&		\\ 
+% \hline
+\end{tabu}
+
+
+\end{document}

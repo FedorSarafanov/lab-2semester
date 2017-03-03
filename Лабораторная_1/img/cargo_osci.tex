@@ -1,0 +1,51 @@
+\documentclass{standalone}
+
+\usepackage{mmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english, russian]{babel}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{scopes}
+\usetikzlibrary{%
+     decorations.pathreplacing,%
+     decorations.pathmorphing,%
+    patterns,%
+    calc,%
+    scopes,%
+    arrows,%
+    fadings,
+    % arrows.spaced,%
+}
+\tikzset{force/.style={>=latex,draw=blue,fill=blue}, axis/.style={densely dashed,gray,font=\small}, acceleration/.style={>=open triangle 60,draw=blue,fill=blue}, inforce/.style={force,double equal sign distance=2pt}, interface/.style={pattern = north east lines, draw    = none, pattern color=gray!60, }, cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},    cargo/.style={rectangle, fill=black!70, inner sep=2.5mm/10, }}
+\usepackage[outline]{contour}
+
+\begin{document}
+	\begin{tikzpicture}
+	    \begin{axis}[
+		grid=both,
+		scale=1.7,
+		grid style={line width=.1pt, draw=gray!10},
+		major grid style={line width=.2pt,draw=gray!50},
+		axis lines=middle,
+		minor tick num=5,
+		xmin=0,
+		% xmax=26,
+		y dir=reverse,
+	    xlabel style={below right, xshift=1em},
+	    ylabel style={above left},
+		ymin=0,
+		% ymax=5,
+		xlabel=$t$,
+		ylabel=$x$,
+		tick style={very thick},
+		legend style={
+		at={(rel axis cs:0,1)},
+		anchor=north west,draw=none,inner sep=0pt,fill=gray!10}
+	]
+        \addplot +[thin, x=t, y=x, smooth, mark=] table {../data/osci.dat};
+	    \end{axis}
+	\end{tikzpicture}	
+
+\end{document}

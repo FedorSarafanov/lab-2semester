@@ -1,0 +1,1916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object class="org.opensourcephysics.cabrillo.tracker.TrackerPanel">
+    <property name="version" type="string">4.96</property>
+    <property name="width" type="double">1280.0</property>
+    <property name="height" type="double">720.0</property>
+    <property name="magnification" type="double">0.7071067811865475</property>
+    <property name="center_x" type="int">439</property>
+    <property name="center_y" type="int">389</property>
+    <property name="videoclip" type="object">
+    <object class="org.opensourcephysics.media.core.VideoClip">
+        <property name="video" type="object">
+        <object class="org.opensourcephysics.media.xuggle.XuggleVideo">
+            <property name="path" type="string">без_грузов_пробный.mp4</property>
+        </object>
+        </property>
+        <property name="video_framecount" type="int">277</property>
+        <property name="startframe" type="int">102</property>
+        <property name="stepsize" type="int">1</property>
+        <property name="stepcount" type="int">58</property>
+        <property name="starttime" type="double">0.0</property>
+        <property name="readout" type="string">frame</property>
+        <property name="playallsteps" type="boolean">true</property>
+    </object>
+    </property>
+    <property name="clipcontrol" type="object">
+    <object class="org.opensourcephysics.media.core.StepperClipControl">
+        <property name="rate" type="double">1.0</property>
+        <property name="delta_t" type="double">33.32222222222222</property>
+        <property name="frame" type="int">159</property>
+    </object>
+    </property>
+    <property name="referenceframe" type="string">mass A</property>
+    <property name="coords" type="object">
+    <object class="org.opensourcephysics.media.core.ImageCoordSystem">
+        <property name="fixedorigin" type="boolean">true</property>
+        <property name="fixedangle" type="boolean">false</property>
+        <property name="fixedscale" type="boolean">true</property>
+        <property name="locked" type="boolean">false</property>
+        <property name="framedata" type="array" class="[Lorg.opensourcephysics.media.core.ImageCoordSystem$FrameData;">
+            <property name="[0]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[1]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[2]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[3]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[4]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[5]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[6]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[7]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[8]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[9]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[10]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[11]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[12]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[13]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[14]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[15]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[16]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[17]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[18]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[19]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[20]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[21]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[22]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[23]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[24]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[25]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[26]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[27]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[28]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[29]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[30]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[31]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[32]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[33]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[34]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[35]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[36]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[37]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[38]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[39]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[40]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[41]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[42]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[43]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[44]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[45]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[46]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[47]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[48]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[49]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[50]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[51]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[52]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[53]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[54]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[55]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[56]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[57]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[58]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[59]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[60]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[61]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[62]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[63]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[64]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[65]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[66]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[67]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[68]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[69]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[70]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[71]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[72]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[73]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[74]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[75]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[76]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[77]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[78]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[79]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[80]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[81]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[82]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[83]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[84]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[85]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[86]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[87]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[88]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[89]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[90]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[91]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[92]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[93]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[94]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[95]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[96]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[97]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[98]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[99]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[100]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[101]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[102]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">36.13743184072489</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[103]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-1.4598812431675057</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[104]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-3.5582280015724503</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[105]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-3.6791736692772004</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[106]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[107]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[108]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[109]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[110]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[111]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[112]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[113]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-30.43043154205338</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[114]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[115]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[116]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[117]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[118]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[119]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[120]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-1.8210320857035525</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[121]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[122]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[123]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[124]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[125]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[126]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[127]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[128]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[129]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[130]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[131]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[132]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[133]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[134]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[135]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[136]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[137]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[138]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[139]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[140]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[141]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[142]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[143]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[144]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[145]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[146]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[147]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[148]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[149]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[150]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[151]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[152]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[153]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[154]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[155]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[156]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[157]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[158]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+            <property name="[159]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">640.0</property>
+                <property name="yorigin" type="double">360.0</property>
+                <property name="angle" type="double">-0.6822803180459445</property>
+                <property name="xscale" type="double">0.7269359148501768</property>
+                <property name="yscale" type="double">0.7269359148501768</property>
+            </object>
+            </property>
+        </property>
+    </object>
+    </property>
+    <property name="tracks" type="collection" class="java.util.ArrayList">
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.CoordAxes">
+            <property name="name" type="string">axes</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">200</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">200</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.BoldSimpleAxes</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">false</property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.PointMass">
+            <property name="mass" type="double">1.0</property>
+            <property name="name" type="string">mass A</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">255</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">0</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.Diamond</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">true</property>
+            <property name="framedata" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.PointMass$FrameData;">
+                <property name="[102]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">321.0804851157661</property>
+                    <property name="y" type="double">404.4542447629549</property>
+                </object>
+                </property>
+                <property name="[103]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">322.06269272027816</property>
+                    <property name="y" type="double">403.8236795609133</property>
+                </object>
+                </property>
+                <property name="[104]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.11599368059444</property>
+                    <property name="y" type="double">406.5103726723728</property>
+                </object>
+                </property>
+                <property name="[105]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">325.11255839381147</property>
+                    <property name="y" type="double">410.267729270244</property>
+                </object>
+                </property>
+                <property name="[106]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">326.9748050027654</property>
+                    <property name="y" type="double">410.4525746814477</property>
+                </object>
+                </property>
+                <property name="[107]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.43586497969227</property>
+                    <property name="y" type="double">410.2890575955038</property>
+                </object>
+                </property>
+                <property name="[108]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">330.83594595178715</property>
+                    <property name="y" type="double">410.4392640325308</property>
+                </object>
+                </property>
+                <property name="[109]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">330.11187237726654</property>
+                    <property name="y" type="double">408.7676245107615</property>
+                </object>
+                </property>
+                <property name="[110]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.37486394850885</property>
+                    <property name="y" type="double">408.3954037009087</property>
+                </object>
+                </property>
+                <property name="[111]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.04993932527975</property>
+                    <property name="y" type="double">407.40885970134275</property>
+                </object>
+                </property>
+                <property name="[112]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.08887436619443</property>
+                    <property name="y" type="double">406.42509506979695</property>
+                </object>
+                </property>
+                <property name="[113]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.38130646078616</property>
+                    <property name="y" type="double">406.97946530632635</property>
+                </object>
+                </property>
+                <property name="[114]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.93578259186575</property>
+                    <property name="y" type="double">407.4501392745083</property>
+                </object>
+                </property>
+                <property name="[115]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.6373243589808</property>
+                    <property name="y" type="double">406.6276752688998</property>
+                </object>
+                </property>
+                <property name="[116]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.48241220805335</property>
+                    <property name="y" type="double">406.43446732873076</property>
+                </object>
+                </property>
+                <property name="[117]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.5013814102547</property>
+                    <property name="y" type="double">407.3019020972074</property>
+                </object>
+                </property>
+                <property name="[118]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.235604338137</property>
+                    <property name="y" type="double">408.7733708859298</property>
+                </object>
+                </property>
+                <property name="[119]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.1638366915072</property>
+                    <property name="y" type="double">409.4107231145224</property>
+                </object>
+                </property>
+                <property name="[120]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.82171633572625</property>
+                    <property name="y" type="double">408.8881885347896</property>
+                </object>
+                </property>
+                <property name="[121]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.0068758753017</property>
+                    <property name="y" type="double">409.3536528535818</property>
+                </object>
+                </property>
+                <property name="[122]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">322.36309556273375</property>
+                    <property name="y" type="double">409.9396997189116</property>
+                </object>
+                </property>
+                <property name="[123]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">320.707869568834</property>
+                    <property name="y" type="double">409.61824092651227</property>
+                </object>
+                </property>
+                <property name="[124]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">322.1416104691582</property>
+                    <property name="y" type="double">410.7865174121723</property>
+                </object>
+                </property>
+                <property name="[125]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">323.1147604897815</property>
+                    <property name="y" type="double">411.42249429345884</property>
+                </object>
+                </property>
+                <property name="[126]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">323.0808733271766</property>
+                    <property name="y" type="double">411.38463076996914</property>
+                </object>
+                </property>
+                <property name="[127]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.2139979498909</property>
+                    <property name="y" type="double">411.25538171663777</property>
+                </object>
+                </property>
+                <property name="[128]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.1784681906745</property>
+                    <property name="y" type="double">412.37081438690484</property>
+                </object>
+                </property>
+                <property name="[129]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.04646387896537</property>
+                    <property name="y" type="double">412.75019503961926</property>
+                </object>
+                </property>
+                <property name="[130]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.33868767568606</property>
+                    <property name="y" type="double">412.5536267660576</property>
+                </object>
+                </property>
+                <property name="[131]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.99475037514947</property>
+                    <property name="y" type="double">412.70550535874554</property>
+                </object>
+                </property>
+                <property name="[132]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">325.08508092197235</property>
+                    <property name="y" type="double">413.44089940386027</property>
+                </object>
+                </property>
+                <property name="[133]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">325.64033225370395</property>
+                    <property name="y" type="double">412.436975275363</property>
+                </object>
+                </property>
+                <property name="[134]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.85027793911945</property>
+                    <property name="y" type="double">411.4531738372632</property>
+                </object>
+                </property>
+                <property name="[135]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.9225593298904</property>
+                    <property name="y" type="double">411.49947550055026</property>
+                </object>
+                </property>
+                <property name="[136]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.0535731193347</property>
+                    <property name="y" type="double">412.39191098566334</property>
+                </object>
+                </property>
+                <property name="[137]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.0072772706261</property>
+                    <property name="y" type="double">411.43236250354335</property>
+                </object>
+                </property>
+                <property name="[138]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">325.92848485849095</property>
+                    <property name="y" type="double">409.53806300615895</property>
+                </object>
+                </property>
+                <property name="[139]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">325.64693499208715</property>
+                    <property name="y" type="double">410.25968736106256</property>
+                </object>
+                </property>
+                <property name="[140]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.2725795414992</property>
+                    <property name="y" type="double">410.6615789397491</property>
+                </object>
+                </property>
+                <property name="[141]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.13815763071375</property>
+                    <property name="y" type="double">409.40606979508243</property>
+                </object>
+                </property>
+                <property name="[142]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">326.11166491491235</property>
+                    <property name="y" type="double">408.4573070881013</property>
+                </object>
+                </property>
+                <property name="[143]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.01689537223615</property>
+                    <property name="y" type="double">409.09824039996306</property>
+                </object>
+                </property>
+                <property name="[144]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">327.6981773312609</property>
+                    <property name="y" type="double">408.6612897505647</property>
+                </object>
+                </property>
+                <property name="[145]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">326.8643135319136</property>
+                    <property name="y" type="double">407.7562771384862</property>
+                </object>
+                </property>
+                <property name="[146]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.82690512603494</property>
+                    <property name="y" type="double">407.6425256765958</property>
+                </object>
+                </property>
+                <property name="[147]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">321.89854572540673</property>
+                    <property name="y" type="double">409.06288818361054</property>
+                </object>
+                </property>
+                <property name="[148]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">323.4109600093859</property>
+                    <property name="y" type="double">409.2204708641848</property>
+                </object>
+                </property>
+                <property name="[149]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">324.3498318151951</property>
+                    <property name="y" type="double">408.8594365214128</property>
+                </object>
+                </property>
+                <property name="[150]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">326.51444801317496</property>
+                    <property name="y" type="double">409.3566881085467</property>
+                </object>
+                </property>
+                <property name="[151]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.89800893855795</property>
+                    <property name="y" type="double">409.146537044923</property>
+                </object>
+                </property>
+                <property name="[152]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.3279045973512</property>
+                    <property name="y" type="double">408.4642531939704</property>
+                </object>
+                </property>
+                <property name="[153]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">330.21944767564617</property>
+                    <property name="y" type="double">407.5194527861473</property>
+                </object>
+                </property>
+                <property name="[154]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">331.31134607292006</property>
+                    <property name="y" type="double">407.5864776858873</property>
+                </object>
+                </property>
+                <property name="[155]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.02268698638386</property>
+                    <property name="y" type="double">407.469355750213</property>
+                </object>
+                </property>
+                <property name="[156]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.8911154481282</property>
+                    <property name="y" type="double">407.3716281868526</property>
+                </object>
+                </property>
+                <property name="[157]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.377409058058</property>
+                    <property name="y" type="double">407.3837544187853</property>
+                </object>
+                </property>
+                <property name="[158]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">329.1931103011665</property>
+                    <property name="y" type="double">407.29767061121333</property>
+                </object>
+                </property>
+                <property name="[159]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">331.8298280812553</property>
+                    <property name="y" type="double">407.2157483051193</property>
+                </object>
+                </property>
+            </property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.Calibration">
+            <property name="name" type="string">calibration points A</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">255</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">0</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.BoldCrosshair</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">false</property>
+            <property name="fixed_coordinates" type="boolean">false</property>
+            <property name="worldX0" type="double">1.5861815509005055</property>
+            <property name="worldY0" type="double">-0.3176850616065394</property>
+            <property name="worldX1" type="double">777.2246068962618</property>
+            <property name="worldY1" type="double">1.3672725487951993</property>
+            <property name="world_coordinates" type="array" class="[[D">
+                <property name="array" type="string">{{1.5861815509005055,-0.3176850616065394,777.2246068962618,1.3672725487951993},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null}</property>
+            </property>
+            <property name="axes" type="string">XY</property>
+        </object>
+        </property>
+    </property>
+    <property name="selectedtrack" type="string">calibration points A</property>
+    <property name="dividers" type="array" class="[D">
+        <property name="array" type="string">{0.7018239492466296,0.5012019230769231,1.0,0.4520222045995242}</property>
+    </property>
+    <property name="selected_views" type="array" class="[Ljava.lang.String;">
+        <property name="[0]" type="string">Plot View</property>
+        <property name="[1]" type="string">Table View</property>
+        <property name="[2]" type="string">World View</property>
+        <property name="[3]" type="string">Page View</property>
+    </property>
+    <property name="toolbar" type="object">
+    <object class="org.opensourcephysics.cabrillo.tracker.TToolBar">
+        <property name="trace" type="boolean">false</property>
+        <property name="position" type="boolean">true</property>
+        <property name="velocity" type="boolean">false</property>
+        <property name="acceleration" type="boolean">false</property>
+        <property name="labels" type="boolean">true</property>
+        <property name="multiply_by_mass" type="boolean">false</property>
+        <property name="trail_length" type="int">15</property>
+        <property name="stretch" type="int">1</property>
+        <property name="stretch_acceleration" type="int">1</property>
+    </object>
+    </property>
+</object>
