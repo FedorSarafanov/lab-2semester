@@ -1,0 +1,455 @@
+\documentclass[a4paper,12pt]{article}%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Мне (да в прочем, и всем) свойственно идеализировать людей, и иногда не хочется, чтобы они были другими. А они другие, и все очень сложно получается)
+\def\source{/home/lab/tex/templates}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{\source/head.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\labauthor{Сарафанов Ф.Г.}
+\def\labauthors{Сарафанов Ф.Г.}
+\def\labnumber{16}
+\def\labtheme{Определение вязкости воздуха}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{\source/math_left-of-equation.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\geometry	
+	{
+		left			=	2cm,
+		right 			=	2cm,
+		top 			=	3cm,
+		bottom 			=	3cm,
+		bindingoffset	=	0cm
+	}
+\input{\source/lab_colontitle.tex}
+% \usepackage{siunitx} % Formats the units and values
+% \sisetup{
+%   round-mode          = places, % Rounds numbers
+%   round-precision     = 0, % to 2 places
+% }
+\pgfplotstableset{
+    columns/mat/.style={%
+    string type,
+    column type=r,% 
+    column name=\textsc{Груз}%
+    },
+    columns/m1/.style={column name=$m_1\text{, г}$},
+    columns/m2/.style={column name=$m_2\text{, г}$},
+    columns/m3/.style={column name=$m_3\text{, г}$},
+    columns/m/.style={column name=$m\text{, г}$},
+    columns/dr/.style={column name=$\Delta{d}\text{, мм}$},
+    columns/d/.style={column name=$<d>$},
+    columns/r/.style={column name=$<r>$},
+    empty cells with={--}, % replace empty cells with ’--’
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule}
+  }
+
+\pgfplotsset{
+    % most recent feature set of pgfplots
+    compat=newest,
+}
+
+\newcommand\ct[1]{\text{\rmfamily\upshape #1}}
+
+\newcommand*{\const}{\ct{const}}
+
+\begin{document}
+
+\input{\source/lab_title-page.tex} %Титульная страница
+
+\tableofcontents
+\newpage
+
+\section*{Введение} % (fold)
+\addcontentsline{toc}{section}{Введение}
+\label{sec:input}
+
+\section{Теория лабораторной работы}
+
+\subsection{Эскиз установки} % (fold)
+\label{sec:device}
+
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.45\linewidth]{img/c}
+	% \caption{c}
+	\label{fig:c}
+\end{figure}
+
+\subsection{Вывод формулы Пуазёйля}
+    
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=0.8\linewidth]{img/pz1}
+	\caption{pz1}
+	\label{fig:pz1}
+\end{figure}
+
+Выделим из всей трубы радиусом $R$ цилиндр радиусом $r$. По формуле вязкого трения Ньютона, сила трения при движении такого цилиндра 
+\begin{equation}
+	f_R=\eta\frac{dv}{dr}S_\text{бок}
+\end{equation}
+С другой стороны, при перепаде давления на концах трубки $\Delta p$, будет действовать сила давления:
+\begin{equation}
+	f_p=\Delta p \cdot S
+\end{equation}
+Из условия стационарности потока скорость потока должна оставаться постоянной, т.е. сила давления уравновешивает силу трения:
+\begin{equation}
+	\eta\frac{dv}{dr}S_\text{бок}=\Delta p \cdot S
+\end{equation}
+\begin{equation}
+	S_\text{бок}=2\pi r l
+\end{equation}
+\begin{equation}
+	S=\pi r^2
+\end{equation}
+\begin{equation}
+	\eta\frac{dv}{dr}2\pi r l=\Delta p \cdot \pi r^2
+\end{equation}
+Произведем разделение переменных:
+\begin{equation}
+	dv=\frac{\Delta p}{2\eta l}rdr
+\end{equation}
+Граничные условия $v(r=R)=0$, $v(r=0)\ne\infty$. Тогда расставим пределы и произведем интегрирование:
+\begin{equation}
+	\int\limits_0^{v(r)}dv=\int\limits_R^r\frac{\Delta p}{2\eta l}rdr
+\end{equation}
+Отсюда получаем параболическое распределение скорости в течении Пуазёйля: 
+\begin{equation}
+	v(r)=\frac{\Delta p (r^2-R^2)}{4\eta l}
+\end{equation}
+Расход жидкости через кольцевое сечение радиусом $r$, шириной $dr$ ($S=2\pi r dr$)
+\begin{equation}
+	dQ=S\cdot v=\frac{\Delta p (r^2-R^2)}{4\eta l}\pi r dr
+\end{equation}
+Тогда расход жидкости через все сечение трубы
+\begin{equation}
+	Q=\int dQ=\int\limits_0^R \frac{\Delta p (r^2-R^2)}{4\eta l}\pi r dr
+\end{equation}
+И окончательно получили формулу Пуазёйля:
+\begin{equation}
+	\label{Q}
+	Q=\Delta p \frac{\pi R^4}{8\eta l}
+\end{equation}
+
+
+\newpage
+\subsection{Расчет вязкости через экспериментальные данные}
+
+С одной стороны, $Q$ нашли как функцию $Q=f(\Delta p, R, \eta, l)$ (см. \ref{Q}), с другой, объёмный расход можно выразить по определению:
+\begin{equation}
+	Q=-\frac{dV}{dt}=-S\frac{dh}{dt}
+\end{equation}
+Знак минус говорит об убыли жидкости.
+Теперь можем записать дифференциальное уравнение:
+\begin{equation}
+	-S\frac{dh}{dt}=\Delta p \frac{\pi R^4}{8\eta l}
+\end{equation}
+Как было показано ранее, $\Delta p = \rho g h$. Тогда
+\begin{equation}
+ 	S\frac{dh}{dt}=-\frac{\pi R^4}{8\eta l}\rho g h
+ \end{equation} 
+Обозначим 
+\begin{equation}
+	c=\frac{\pi R^4 \rho g}{8\eta lS}
+\end{equation}
+Тогда
+\begin{equation}
+	-\frac{dh}{dt}=ch
+\end{equation}
+\begin{equation}
+	-\int\limits_{h_0}^{h(t)}\frac{dh}{h}=\int\limits_0^tcdt
+\end{equation}
+Отсюда получаем
+\begin{equation}
+	\ln\frac{h_0}h=ct
+\end{equation}
+
+Из предыдущего уравнения
+\begin{equation}
+	h(t)=h_0\cdot e^{-ct},\quad\text{где}\quad
+	c=\frac{\pi R^4 \rho g}{8\eta lS}
+\end{equation}
+
+Таким образом, можно построением графика $\ln\frac{h_0}h$ от $t$ найти угловой коэффициент $c$, через который выразится вязкость воздуха:
+
+\begin{equation}
+	\eta=\frac{\pi R^4 \rho g}{8clS}
+\end{equation}
+где $\rho$ -- плотность жидкости, $R$ -- радиус капилляра, $l$ -- длина капилляра, $g$ -- ускорение свободного падения, $S$ -- площадь поперечного сечения сосуда, $c$ -- угловой коэффициент графика $\ln\frac{h_0}h$ от $t$.
+
+
+\begin{equation}
+	\label{ht}
+	h(t)=h_0e^{-ct},\quad\text{где}\quad c=\frac{\pi r^4 \rho h}{8\eta lS}
+\end{equation}
+
+\subsection{Оценка уровня установления жидкости}
+
+Выполнение лабораторной работы возможно при условии, что на концах капилляра установится квазистационарная разность давлений. 
+
+Эта необходимость объясняется условием равенства расхода жидкости и воздуха.
+
+Связав первоначальное понижение давления воздуха с расширением \textit{без} изменения количества, можем найти такое расстояние $b$, которое должен пройти уровень жидкости до установления квазистационарной	 разности давлений.
+
+Воспользуемся законом Менделеева-Клапейрона на данных условиях:
+
+\begin{equation}
+	p_aV_0=p_aSl=\frac{m}{M} RT = \const
+\end{equation}
+Где $l$ -- высота воздушного столба в сосуде в начальный момент времени.
+
+Если высота всего сосуда $H$, то
+\begin{equation}
+	l=H-h_0,
+\end{equation}
+где $h_0=h(t=0)$ -- высота водяного столба в сосуде в начальный момент времени.
+
+Тогда высота водяного столба в момент установления давлений будет
+\begin{equation}
+	h=h_0-b
+\end{equation}
+Тогда
+\begin{equation}
+	p_al=(p_a-\rho g (h_0-b))(l+b)
+\end{equation}
+\begin{equation}
+	p_al=p_al+
+			p_ab-
+			\rho g h_0l-
+			\rho g h_0b+
+			\rho g bl+
+			\rho g b^2
+\end{equation}
+\begin{equation}
+			\rho g b^2+
+			b(p_a-\rho g h_0+\rho g l)
+			-\rho g h_0l
+			=
+			0
+\end{equation}
+Тогда
+\begin{equation}
+	b=\frac{-(p_a-\rho g h_0+\rho g l)\pm\sqrt{(p_a-\rho g h_0+\rho g l)^2+4\rho^2g^2h_0l}}{2\rho g}
+\end{equation}
+
+Подставив параметры установки и лабораторные условия ($p_a=100258\text{ Па}$), получим пару решений.
+
+Решением, имеющим физический смысл, будет
+\begin{equation}
+	b=1.5486\ldots
+\end{equation}
+
+Оценочно, погрешность вычисления $b>\Delta h_0=0.1 \text{ cm}$. Тогда необходимо <<откинуть>> незначащие разряды, и окончательно получим значение, на которое нужно дать опуститься уровню воды для установления разности давлений -- 
+\begin{equation}
+	b=1.5 \text{ cm}
+\end{equation}
+
+Однако, эта оценка получена при предположении, что за время установления воздух в сосуд не поступает.
+В условиях эксперимента это не так. 
+
+Понижение давления воздуха в сосуде будет замедлено постоянным увеличением объёма воздуха, а значит, до установления уровень жидкость пройдет большее расстояние.
+
+Получили, что рассчитанное нами $b$ -- заниженная оценка. 
+
+В эксперименте уровню воды дали опуститься на $9\text{ cm}$.
+
+
+\subsection{Оценка ошибки определения давления}
+
+Формула (\ref{ht}) зависимости $h(t)$ выведена в предположении о статичности перепада давлений на капилляре:
+\begin{equation}
+	\Delta p = \rho g h
+\end{equation}
+Этот закон достаточно хорошо совпадает с реальностью до начала колебаний жидкости. Однако из (\ref{ht}) можно выразить скорость жидкости:
+
+\begin{equation}
+	h(t)=h_0e^{-ct}
+\end{equation}
+\begin{equation}
+	v=\frac{dh}{dt}=\frac{d[h_0e^{-ct}]}{dt}=-ch_0e^{-ct}
+\end{equation}
+Или, избавляясь от времени
+\begin{equation}
+	v=-ch
+\end{equation}
+Тогда запишем уравнение Бернулли для верхней и нижней точки жидкости в кране:
+\begin{equation}
+	p^*+\rho g h +\frac{\rho v^2}{2}=p_a+\frac{\rho v_k^2}{2}
+\end{equation}
+Где $v_k$ -- скорость жидкости в кране, которую можно выразить через расход жидкости в сечении сосуда и в сечении крана:
+\begin{equation}
+	Q_1=S_kv_k=Q_2=Sv \Rightarrow v_k = v\frac{S}{S_k}
+\end{equation}
+Откуда давление воздуха в сосуде $p^*$
+\begin{equation}
+	p^*=p_a-\rho g h-\frac{\rho v^2}{2}+\frac{\rho v_k^2}{2}
+\end{equation}
+То есть, в случае наличия динамического давления разность давлений будет
+\begin{equation}
+	\Delta p = p_a-p^*=\rho g h+\frac{\rho v^2}{2}-\frac{\rho v_k^2}{2}
+\end{equation}
+И наша ошибка в определении давления
+\begin{equation}
+	p_{err}=\frac{\rho v^2}{2}-\frac{\rho v_k^2}{2}=\frac12\rho c^2h^2[1-\frac{S^2}{S^2_k}]
+\end{equation}
+
+Т.е. максимальная ошибка, при подстановке экспериментальных значений составляет
+\begin{equation}
+	p_{err}=-5.821 \text{ Па},
+\end{equation}
+что составляет примерно $-0.1\%$ от значения $\rho g h$ на той же высоте.
+
+\newpage
+\section{Экспериментальные данные}
+\subsection{Прямые измерения и график $\ln\frac{h_0}{h}$}
+
+\begin{table}[H]
+	\caption{Экспериментальные данные из протокола}
+	\label{tab:m}
+	\centering
+	\pgfplotstableread[col sep = tab]{data/data.csv}{\loadedtable}
+	\pgfplotstabletypeset[
+		columns={h,tt1,tt2,tt3,t,pln},	
+		% display columns/t/.style=
+		% 	{
+		% 		column name=$Value 2$,
+		% 		column type={S},
+		% 		string type
+		% 	},
+	columns/h/.style={column name=$h'$},			
+	columns/tt1/.style={column name=$t_1$},			
+	columns/tt2/.style={column name=$t_2$},			
+	columns/tt3/.style={column name=$t_3$},			
+	columns/t/.style={column name=$<t>$},			
+	columns/pln/.style={column name=$\ln\frac{h_0}{h}$},			
+	]{\loadedtable}
+\end{table}
+
+Из формулы (\ref{ht}) можно получить следующую: 
+\begin{equation}
+	ct=\ln\frac{h_0}{h}
+\end{equation}
+Которая есть ничто иное, как линейная зависимость. Построив график логарифма от времени, можно найти $c$ и выразить вязкость.
+\begin{gather}
+	f(h,h_0)=\ln\frac{h_0}{h}\\
+	\Delta f=
+		\pm\sqrt{
+			\left(
+				\frac{\partial f}{\partial h}\Delta h
+			\right)^2+
+			\left(
+				\frac{\partial f}{\partial h_0}\Delta h
+			\right)^2			
+		}=
+	\pm\Delta h\sqrt{\frac{1}{h^2}+\frac{1}{h_0^2}}
+\end{gather}
+
+\begin{figure}[H]
+	\centering
+	\includestandalone[width=1\linewidth]{img/ln}
+	\caption{Зависимость $\ln\frac{h_0}h$ от времени}
+	\label{fig:ln}
+\end{figure}
+Из графика, построенного по экспериментальным данным, нашли линейную регрессию графика $f(t)$. 
+
+Так как после 400 секунды началось неравномерное вытекание воды, для поиска регрессии такие данные не учитывались.
+
+Из графика нашли коэффициент $c$:
+\begin{equation}
+	c=2.19\cdot10^{-3}
+\end{equation}
+
+Максимальная относительная погрешность определения коэффициента 
+\begin{equation}
+	\varepsilon (c) = \varepsilon( f_{max}[t']) + \varepsilon (t')\approx 0.07
+\end{equation}
+И отсюда абсолютная
+\begin{equation}
+	\Delta c = 0.22\cdot10^{-3}
+\end{equation}
+Погрешность определения вязкости
+\begin{equation}
+	\varepsilon (\eta)=4\varepsilon(R)+\varepsilon (c)+\varepsilon (l)=
+	4\frac{\Delta R}{R}+\frac{\Delta c}{c}=0.0004+0.07=0.0704
+\end{equation}
+И 
+\begin{equation}
+	\Delta \eta = 0.0704\cdot\eta=13.5 \text{ П}
+\end{equation}
+
+Подставляя опытные значения в следующую формулу, найдем вязкость воздуха:
+
+\begin{equation}
+	\eta=\frac{\pi R^4 \rho g}{8clS}=192[\pm13.5] \cdot 10^{-6} \text{ П}
+\end{equation}
+
+
+\subsection{Число Рейнольдса}
+
+Число Рейнольдса характеризует переход от ламинарного течения к турбулентному. В нашем случае найдем $Re$ для течения в капилляре.
+\begin{equation}
+	Re_{кап}=\frac{\rho_\text{воздуха}\cdot v\cdot R_\text{капилляра}}{\eta}
+\end{equation}
+Скорость течения воздуха в капилляре пока неизвестна. Найдем её через условие равенства расходов воздуха и воды. С одной стороны,
+\begin{equation}
+	|Q|=\Delta p \frac{\pi R^4}{8\eta l}
+\end{equation}
+Но с другой стороны
+\begin{equation}
+	|Q|=S_\text{капилляра}v
+\end{equation}
+Отсюда
+\begin{equation}
+	v=\frac{\pi R^4}{8\eta l}\rho g h\frac{1}{S_\text{капилляра}}
+\end{equation}
+или
+\begin{equation}
+	v=ch\frac{S_\text{сосуда}}{S_\text{капилляра}}
+\end{equation}
+Тогда максимальная скорость будет
+\begin{equation}
+	v_{max}=2.19\cdot10^{-3}\cdot59\cdot\frac{18.5}{0.00062}=3299 \text{ см/с}
+\end{equation}
+И тогда
+%0.001293
+\begin{equation}
+	Re_{max}=525 \leq 1100
+\end{equation}
+
+\newpage
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+
+
+
+В проведенной лабораторной работе было найдено значение вязкости воздуха при температуре $t^\circ=25\ C$, давлении $p_a=100258 $ Па:
+\begin{equation}
+	\eta=192[\pm13.5] \cdot 10^{-6} \text{ П}
+\end{equation}
+
+Снята зависимость высоты уровня воды от времени, а также значение времени начала колебаний жидкости ($t^*=400 c$).
+
+Оценено расстояние, на которое должен опуститься уровень воды для установления давления в верхней части сосуда $b$ (при условии постоянного объема воздуха):
+\begin{equation}
+	b=1.5\pm0.1 \text{ см}
+\end{equation}
+
+Показано, что данная оценка в реальности является заниженной.
+
+Оценена относительна ошибка, вызванная предположением о статичности перепада давлений:
+\begin{equation}
+	p_{err}\approx -0.1\%\cdot \rho g h_0
+\end{equation}
+
+Найдено число Рейнольдса для течения воздуха в капилляре:
+\begin{equation}
+	Re_{max}=525 \leq 1100
+\end{equation}
+Откуда сделан вывод о ламинарности течения воздуха в капилляре.
+
+
+\end{document}

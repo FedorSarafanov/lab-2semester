@@ -1,0 +1,58 @@
+\documentclass[tikz]{standalone}
+\newcommand*{\source}{/home/lab/tex/templates}
+\input{\source/head-img.tex}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}
+  	[
+		grid=both,
+		scale=2,
+		grid style={line width=.1pt, draw=gray!10},
+		major grid style={line width=.2pt,draw=gray!50},
+		axis lines=middle,
+		minor tick num=5,
+		% xmax=1,
+	    xlabel style={below right, xshift=1em},
+	    ylabel style={above left, xshift=0em},
+		% xlabel style={above},
+	    % xticklabel style={above, yshift=0.25em},
+		% ymax=0,
+		% x SI prefix=kilo,
+		x unit=c,
+		y unit=cm,
+	    % y SI prefix=milli,
+	    % y unit=,		
+		% ymax=5,
+		xlabel=$t$,
+		ylabel=$h$,
+		tick style={very thick},
+		legend style={
+		at={(rel axis cs:0,1)},
+		legend cell align=left,
+		legend pos = north west,		
+		anchor=north west,draw=none,inner sep=0pt,fill=gray!10}
+	]
+        
+
+   % \addplot[draw=none,magenta] table[x=t, mark=none,  y={create col/linear regression={y=pln}}]
+   %   {../data/data-lin.csv};
+	
+
+   %  \addplot[domain=0:666, cyan]
+   %      {\pgfplotstableregressiona*x + \pgfplotstableregressionb};
+	\addplot[magenta, x=t, y=h, smooth, mark=none, ] table[x=t, y=h] {../data/data.csv};	
+	% \addplot[magenta, x=t, y=h, smooth, mark=none, /pgfplots/error bars/.cd,x dir=both, y dir=both, y explicit] table[x=t, y=pln, y error=delta, x error=deltat] {../data/data.csv};	
+
+	% \addlegendentry{
+	% 	Экспериментальная зависимость
+	% }
+ % 	\addlegendentry{%
+ %        $\ln\frac{h_0}{h}=\pgfmathprintnumber{\pgfplotstableregressiona} \cdot t$
+ %        %+      \pgfmathprintnumber[print sign=false]{\pgfplotstableregressionb}$ 
+ %        (линейная регрессия)
+ %        }
+
+  \end{axis}
+\end{tikzpicture}
+\end{document}

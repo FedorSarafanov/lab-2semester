@@ -1,0 +1,135 @@
+\documentclass[tikz]{standalone}
+\newcommand*{\source}{/home/lab/tex/templates}
+\input{\source/head-img.tex}
+\tikzset{%
+  show curve controls/.style={
+    postaction={
+      decoration={
+        show path construction,
+        curveto code={
+          \draw [blue] 
+            (\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta)
+            (\tikzinputsegmentlast) -- (\tikzinputsegmentsupportb);
+          \fill [red, opacity=0.5] 
+            (\tikzinputsegmentsupporta) circle [radius=.5ex]
+            (\tikzinputsegmentsupportb) circle [radius=.5ex];
+        }
+      },
+      decorate
+}}}
+\begin{document}
+\tikzset{math3d/.style= {x={(1cm,0cm)}, z={(0,-0.4cm)}, y={(0cm,1cm)}}}
+\begin{tikzpicture}[math3d]
+
+\begin{scope}[canvas is xy plane at z=0]
+	\draw[fill=cyan!40, draw=none] (-0.75,1) rectangle ++(1.5,2.5);
+\end{scope}
+
+
+\begin{scope}[canvas is xy plane at z=0]
+	\draw[xshift=0.25cm]%[show curve controls]
+  (0, 0) .. controls ++(90:0) and ++(20:-0.5) .. (0.4, 0.85) (0.5, 1) coordinate (1) 
+
+  (-0.5, 0) .. controls ++(90:0) and ++(160:-0.5) .. (-0.9, 0.85) (-1, 1) coordinate (2);
+
+  \fill[draw=none, fill=cyan!40]
+  	(0.25,0) -- (0.65,0.85) -- (-0.65,0.85) -- (-0.25,0) -- cycle;
+
+	\fill[xshift=0.25cm, draw=none, fill=white!40]%[show curve controls]
+  (0, 0) .. controls ++(90:0) and ++(20:-0.5) .. (0.4, 0.85)  (-0.5, 0) .. controls ++(90:0) and ++(160:-0.5) .. (-0.9, 0.85); 
+
+	\draw[xshift=0.25cm,  fill=white!40]%[show curve controls]
+  (0, 0) .. controls ++(90:0) and ++(20:-0.5) .. (0.4, 0.85)  (-0.5, 0) .. controls ++(90:0) and ++(160:-0.5) .. (-0.9, 0.85); 
+
+  \draw (1) -- ++ (0,4) -- ++(0.2,1);
+  \draw (2) -- ++ (0,4) -- ++(-0.2,1);
+  \fill[black!5] (1) ++ (0,4) -- ++(0.2,1) -- ++(-1.9,0) -- ++(0.2,-1) -- cycle;
+
+\end{scope}
+\begin{scope}[canvas is xz plane at y=0]
+	\fill[draw=none, fill=cyan!40] (0,0) circle (0.25);
+	\draw[] (0.25,0) arc (0:180:0.25);
+	\draw[dashed] (0.25,0) arc (0:-180:0.25);
+\end{scope}
+\begin{scope}[canvas is xz plane at y=1]
+	\draw[cyan!40, fill=cyan!40] (0,0) circle (0.75);
+	\draw[] (0.75,0) arc (0:180:0.75);
+	\draw[dashed] (0.75,0) arc (0:-180:0.75);
+\end{scope}
+
+\begin{scope}[canvas is xz plane at y=3.5]
+	\draw[cyan!40, fill=cyan!40] (0,0) circle (0.75);
+	\draw[] (0.75,0) arc (0:180:0.75);
+	\draw[dashed] (0.75,0) arc (0:-180:0.75);
+\end{scope}
+
+\begin{scope}[canvas is xz plane at y=6]
+	\draw[fill=black!5,] (0,0) circle (0.95);
+	\draw[dashed, fill=white] (0,0) circle (0.15);
+
+
+\end{scope}
+\begin{scope}[canvas is xz plane at y=5]
+	\draw[fill=black!5, draw=black!5] (0,0) circle (0.75);
+	\draw[] (0.75,0) arc (0:180:0.75);
+	\draw[dashed] (0.75,0) arc (0:-180:0.75);	
+	\draw[dashed, fill=white] (0,0) circle (0.15);
+\end{scope}
+\draw[dashed] (-0.15,5,0) -- ++(0,1,0);
+\draw[dashed] (0.15,5,0) -- ++(0,1,0);
+\fill[white] (-0.15,5,0) rectangle ++(0.3,1,0);
+\begin{scope}[canvas is xz plane at y=5]
+	\draw[dashed, fill=white] (0,0) circle (0.15);
+\end{scope}
+\begin{scope}[canvas is xz plane at y=6]
+	\draw[] (0,0) circle (0.95);
+	\draw[dashed, fill=white] (0,0) circle (0.15);
+\end{scope}
+
+% строймастер домофоны
+% 4300767
+% 4308507
+
+% \draw (0,0,0) -- (0,1,0);
+% \begin{scope}[canvas is zy plane at x=0]
+
+% 	\draw[dashed] (0,2) arc (90:270:2);
+% 	\draw[] (0,-2) arc (-90:90:2);
+
+% 	% \draw[dashed] (0,1) arc (90:270:1);
+% 	% \draw[dashed] (0,-1) arc (-90:90:1);
+% 	\draw[dashed] (0,0) circle (1);
+% \end{scope}
+% 	\draw (0,2,0) -- ++(4,0,0);
+% 	\draw (0,-2,0) -- ++(4,0,0);
+% 	\draw[dashed] (0,-1,0) -- ++(4,0,0);
+% 	\draw[dashed] (0,1,0) -- ++(4,0,0);
+% \begin{scope}[canvas is yz plane at x=4]
+
+% 	\draw[] (0,0) circle (2);
+% 	\draw[pattern=north east lines,pattern color=magenta!30] (0,0) circle (1);
+% 	\draw (0,0) node[transform shape, rotate=90, scale=2, blue] {$S$};
+% \end{scope}
+
+\begin{scope}[canvas is xy plane at z=0]
+	\begin{scope}
+		\lineann[-1.5]{90}{3.5}{$h(t)$}
+		% \lineann[1.5]{90}{-1}{$r$}
+	\end{scope}
+\end{scope}
+
+% \begin{scope}[canvas is xy plane at z=0]
+% 		\lineann[2]{0}{4}{$l$}
+% \end{scope}
+
+% Draw line annotation
+% Input:
+%   #1 Line offset (optional)
+%   #2 Line angle
+%   #3 Line length
+%   #5 Line label
+% Example:
+%   \lineann[1]{30}{2}{$L_1$}
+
+\end{tikzpicture}
+\end{document}

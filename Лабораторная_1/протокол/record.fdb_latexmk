@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1487695776 "record.tex" "record.pdf" "record" 1487695776
+["pdflatex"] 1487695776 "record.tex" "record.pdf" "record" 1490028605
   "/home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1000.tfm" 1480947283 3300 6abb8e321227ead2a8e929e5abc72bd3 ""
   "/home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0500.tfm" 1480795210 3252 bc0f8cc163ba94bbce20e59f671a255d ""
   "/home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0700.tfm" 1480795209 3256 b15a2ce2310c0038b96c5235b038f0eb ""
@@ -101,6 +101,6 @@
   "record.aux" 1487695776 186 d84bf62585b18c5b92804f4b0a9189f3 ""
   "record.tex" 1487695775 6761 984e579b783cab56d94d87f2962c2717 ""
   (generated)
-  "record.pdf"
   "record.aux"
+  "record.pdf"
   "record.log"
